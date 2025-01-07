@@ -465,7 +465,7 @@ walk: // Outer loop for walking the tree
 
 				if !n.wildChild {
 					// If the path at the end of the loop is not equal to '/' and the current node has no child nodes
-					// the current node needs to roll back to last valid skippedNode
+					// that matche the path, the current node needs to roll back to last valid skippedNode.
 					if path != "/" {
 						for length := len(*skippedNodes); length > 0; length-- {
 							skippedNode := (*skippedNodes)[length-1]
